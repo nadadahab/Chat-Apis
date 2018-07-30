@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "409831d7-2683-4320-b1f9-b35781adc822",
+		"name": "Chat-Apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "ce04a4c5-847a-46b6-958f-723df8eb95b2",
+			"name": "GET users listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "ea6cafa9-572c-4ea7-b328-29fe084c7b82",
+			"name": "Send a message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "\"Message\"",
+							"value": "\t{,'from_user_id':1,\n\t'to_user_id' : 2,\n\t'message':\"hhhhhhhh\"\n\t}\n",
+							"sessionValue": "{\n'from_user_id':1,\n'to_user_id' : 2,\n'message':\"hhhhhhhh\"\n}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "c2835e56-4d72-43ff-8207-1074613a9c36",
+			"name": "Get history for a single contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/messages/gethistory/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"gethistory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "b33de4eb-4ce7-4787-8daf-e3a83a8dd6ac",
+			"name": "Delete a message by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/messages/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"messages",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
