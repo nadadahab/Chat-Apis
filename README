@@ -1,0 +1,8 @@
+                                                     To try my app
+
+1-git clone "https://github.com/nadadahab/Chat-Apis.git"
+2-Please import file chat-app.sql 
+3-Run the server by npm start
+4-import file Chat-Apis.postman_collection to POSTMAN and run it
+
+
