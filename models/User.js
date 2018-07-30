@@ -1,7 +1,9 @@
 var db=require('../dbconnection'); //connection
-var User ={
+
+var User = {
     getContactList:function(callback){
         return db.query("Select * from users",callback); 
     }
 };
+
 module.exports=User;

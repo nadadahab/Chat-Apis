@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var Task=require('../models/Message');
+var Message=require('../models/Message');
 
 /* Send a message */
-router.post('/sendmessage',function(req,res,next){
- 
+router.post('/',function(req,res,next){
     Message.addMessage(req.body,function(err,count){
         if(err)
         {
@@ -17,7 +16,7 @@ router.post('/sendmessage',function(req,res,next){
 });
 
 /* Get history for a single contact */
-router.get('/gethistory:id?',function(req,res,next){
+router.get('/gethistory/:id?',function(req,res,next){
      
     Message.getHistoryForSingleContact(req.params.id,function(err,rows){
         if(err)
