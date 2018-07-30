@@ -10,4 +10,5 @@ var Message ={
         return db.query("delete from message where id=?",[id],callback);
         },
 
-}
+};
+module.exports=Message;
