@@ -10,6 +10,8 @@ var usersRouter = require('./routes/users');
 var messagesRouter=require('./routes/messages');
 
 
+
+
 var app = express();
 
 // view engine setup
@@ -22,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
-app.use('/Tasks',messagesRouter);
+app.use('/messages', messagesRouter);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
